@@ -14,3 +14,5 @@ b[n++]="vivid/stasis - #6 🎧 🟥🟩⬛️⬛️⬛️"
 b[n++]="Then God Said, Let There Be Crashes!"
 b[n++]="This is a randomly generated title!"
 b[n++]="Oh that's AI, AI used to randomize this title"
+
+//btw it does nothing for now.
