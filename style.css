@@ -1,11 +1,23 @@
 body {
     background-color: #000;
+	image-rendering: pixelated;
 }
 
 h1,h2,h3,p{
     color:white
 }
-
+  a {
+	color: rgb(78, 235, 169);
+  }
+  a:hover {
+	color: rgb(194, 255, 230);
+  }
+  a:visited {
+	color: rgb(188, 106, 255);
+  }
+  a:active {
+	color: rgb(255, 124, 200);
+  }
 .container {
     background-color: darkblue;
     width: 50%;
