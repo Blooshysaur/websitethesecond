@@ -4,6 +4,35 @@
   <meta charset="utf-8">
   <title>A website</title>
   <link href="style.css" rel="stylesheet" />
+  <!--time -->
+  <script src="/scripts/moment.min.js"></script>
+  <script src="scripts/moment-timezone-with-data.min.js"></script>
+
+  <script type="text/javascript">
+
+    /***********************************************
+    * Local Time script- By Dynamic Drive (http://www.dynamicdrive.com)
+    * Please keep this notice intact
+    * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+    ***********************************************/
+
+
+    function showLocalTime(container, zoneString, formatString){
+	    var thisobj=this
+	    this.container=document.getElementById(container)
+	    this.localtime = moment.tz(new Date(), zoneString)
+	    this.formatString = formatString
+	    this.container.innerHTML = this.localtime.format( this.formatString )
+	    setInterval(function(){thisobj.updateContainer()}, 1000) //update container every second
+    }
+
+    showLocalTime.prototype.updateContainer=function(){
+	    this.localtime.second(this.localtime.seconds() + 1 )
+	    this.container.innerHTML = this.localtime.format( this.formatString )
+    }
+  </script>
+  <!--end time-->
+
 </head> 
 <body>
 
@@ -55,23 +84,30 @@
         <div class="floating sidenav " > <!-- side nav -->
             <section style="--fg: #f0f8ff; --bg: #808080; width:33%; margin-right: 5%; margin-left: auto;">
                 <h1 style="color: var(--fg)">Menu</h1>
-
             </section>
-            <section style="--fg: #f0f8ff; --bg: #808080;">
 
+            <section style="--fg: #f0f8ff; --bg: #808080;">
+                <p class="sub">main pages</p> <!-- main pages -->
                 <a href="/index.html">Home</a>
                 <a href="#">Archive</a>
                 <a href="https://blooshy.atabook.org/">Guestbook</a>
                 <hr>
+                <p class="sub">miscellaneous</p>
                 <a href="#">More info.</a>
                 <a href="/credits.html">Credits</a>
             </section>
-            <center>
-                <img src="/images/nQ75syT.jpeg" alt="cat in toilet" style="width:60%; height: 60%;">
-                <p>what if i flushed the cat</p>
-            </center>
-        </div>
+            <!--time section-->
 
+            <section style="--fg:#ffda21; --bg: #586107;">
+                <h3 style="text-decoration: underline;">Time where I am:</h3>
+                <div id="currenttime" style="font-size: large; letter-spacing: 0.2em; font-weight: 700; text-align: right;">test</div>
+            </section>
+
+            <script type="text/javascript">
+                new showLocalTime("currenttime", "Europe/Paris", "HH:mm:ss (MMMM Do)")
+            </script>
+
+        </div>
         <div class="main">
 
             <section style="--fg: #17ee82; --bg: #0E7F4F ">
@@ -117,65 +153,12 @@
 
         </div>
         <br> <!--debug-->
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p>test</p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+        <center>
+            <img src="/images/nQ75syT.jpeg" alt="cat in toilet" style="width:60%; height: 60%;">
+            <p>what if i flushed the cat</p>
+        </center>
 </body>
 </html>

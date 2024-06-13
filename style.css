@@ -18,6 +18,16 @@ h1,h2,h3,p{
   a:active {
 	color: rgb(255, 124, 200);
   }
+
+.sub{
+	text-align: right;
+	font-size: 18;
+	line-height: 0.5;
+	letter-spacing: 0.6em;
+	font-style: oblique 10deg;
+}
+
+
 .container {
     background-color: darkblue;
     width: 50%;
