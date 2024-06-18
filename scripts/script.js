@@ -1,6 +1,10 @@
 const container = document.getElementById('particle-container');
 const particleCount = 32;
 const imageUrl = 'https://blooshy.nekoweb.org/images/particle.png'; // Replace with your image URL
+const imageUrl2 = 'https://blooshy.nekoweb.org/images/particlealt.png'; // Replace with your image URL
+const imageUrl3 = 'https://blooshy.nekoweb.org/images/pinkie.png'; // Rare particle image
+const rareParticleChance = 0.15; // 1%  
+const isRareParticle = Math.random() < rareParticleChance;
 
 for (let i = 0; i < particleCount; i++) {
     createParticle(i);
@@ -10,11 +14,15 @@ function createParticle(index) {
     const particle = document.createElement('div');
     particle.classList.add('particle');
 
-    particle.style.backgroundImage = `url('${imageUrl}')`;
+     // Determine particle image based on probability
+
+     particle.style.backgroundImage = `url(${isRareParticle ? imageUrl3 : imageUrl})`;
+
 
     const size = Math.random() * 20 + 10;
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
+
 
     const x = Math.random() * window.innerWidth;
     const y = Math.random() * window.innerHeight;
