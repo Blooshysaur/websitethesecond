@@ -37,6 +37,7 @@ h1,h2,h3,p{
 	display: -webkit-box;
 	display: flex;
     margin: auto;
+	z-index: 9;
 }
 
 .main{
@@ -162,6 +163,28 @@ box-shadow: 0px 0px 122px 34px rgba(222,251,255,0.4);
 
 
 
+/* Particles */
+
+#particle-container {
+    overflow: hidden;
+	position: relative;
+	width: inherit;
+	height: inherit;
+	background: #000;
+	overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    opacity: 1;
+    border-radius: 50%;
+	z-index: 0;
+}
 
 
 
